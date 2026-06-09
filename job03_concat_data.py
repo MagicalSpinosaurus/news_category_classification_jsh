@@ -19,17 +19,17 @@ import pandas as pd
 # df = pd.concat([df, df_temp]) # 붙이기
 
 # 6.8추가
-df = pd.read_csv('./naver_headline_news_Culture_20260608.csv')
+df = pd.read_csv('data/naver_headline_news_Culture_20260608.csv')
 # df = pd.concat([df, df_temp])
-df_temp = pd.read_csv('./naver_headline_news_Economics_20260608.csv')
+df_temp = pd.read_csv('data/naver_headline_news_Economics_20260608.csv')
 df = pd.concat([df, df_temp])
-df_temp = pd.read_csv('./naver_headline_news_IT_20260608.csv')
+df_temp = pd.read_csv('data/naver_headline_news_IT_20260608.csv')
 df = pd.concat([df, df_temp])
-df_temp = pd.read_csv('./naver_headline_news_Politics_20260608.csv')
+df_temp = pd.read_csv('data/naver_headline_news_Politics_20260608.csv')
 df = pd.concat([df, df_temp])
-df_temp = pd.read_csv('./naver_headline_news_Society_20260608.csv')
+df_temp = pd.read_csv('data/naver_headline_news_Society_20260608.csv')
 df = pd.concat([df, df_temp])
-df_temp = pd.read_csv('./naver_headline_news_World_20260608.csv')
+df_temp = pd.read_csv('data/naver_headline_news_World_20260608.csv')
 df = pd.concat([df, df_temp])
 
 # print(df.category.value_counts())

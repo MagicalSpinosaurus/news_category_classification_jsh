@@ -11,7 +11,7 @@ import re
 from sklearn.preprocessing import LabelEncoder
 
 
-df = pd.read_csv('./data/naver_headline_news_20260605')
+df = pd.read_csv('./data/news_titles.csv')
 df.drop_duplicates(inplace=True)
 df.reset_index(drop=True, inplace=True)
 print(df.head())
@@ -76,7 +76,7 @@ for i in range(len(tokend_x)):
 x_pad = pad_sequences(tokend_x, maxlen=26)
 print(tokend_x[:10])
 
-model = load_model('./models/news_section_classifier0.6604.h5')
+model = load_model('./models/news_section_classifier0.6069.h5')
 score = model.evaluate(x = x_pad, y=onehot_y, verbose=0)
 print('accuracy:', score[1]) # 39%...40%...
 # 정화도 하락의 원인은?
@@ -109,5 +109,4 @@ for i in range(len(df)):
         df.loc[i,'OX'] = 1 # 예측이라도 맞추면 정답처리
 
 print(df.OX.mean())
-# 62% 많이 올라간다!
 
